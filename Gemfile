@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-gem 'mysql2'
+gem 'mysql', '~> 2.9.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+
+gem 'haml', '~> 4.0.6'
+gem 'bootstrap-sass', '~> 3.3.4.1'
+gem 'pry', '~> 0.10.1'
+gem 'bootstrap_form'
 
 gem 'jquery-rails'
 # gem 'turbolinks'
