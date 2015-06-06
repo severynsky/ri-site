@@ -63,7 +63,7 @@ body{
 .left{
   width: 50%;
   float: left;
-  margin-left: -500px;
+  margin-left: -900px;
 }
 .item{
   padding: 5px;
@@ -108,10 +108,10 @@ body{
   color: orange;
 }
 #news:hover{
-  background-size: 240px 180px;
   background-image: url(/images/icons/lviv.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: 240px;
+//  background-position: center;
+//  background-repeat: no-repeat;
   background-color: none;
 }
 #news:hover p{
@@ -169,9 +169,16 @@ body{
   height: 190px;
   width: 190px;
   position: relative;
+  background-image: url(/images/people-normal.png);
+  background-size: 190px;
   -webkit-transition: 0.15s;
   -o-transition: 0.15s;
   transition: 0.15s;
+}
+#photos:hover{
+  background-image: url(/images/people-hover.jpg);
+  background-size: 190px;
+  background-color: none;
 }
 .triangle{
   position: absolute;
@@ -187,12 +194,6 @@ body{
   -webkit-transition: 0.15s;
   -o-transition: 0.15s;
   transition: 0.15s;
-}
-#photos:hover{
-  background-color: white;
-}
-#photos:hover .triangle{
-  display: block;
 }
 .right{
   width: 50%;
