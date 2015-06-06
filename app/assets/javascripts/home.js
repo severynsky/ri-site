@@ -1,4 +1,4 @@
-$(document).ready(function(){
+var initialFunction = function(){
   $('.right').fadeIn(900);
   $('.left').animate({
     marginLeft: 0
@@ -44,4 +44,4 @@ $(document).ready(function(){
 
 
     });
-});
+};
