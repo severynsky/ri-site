@@ -1,3 +1,5 @@
 this is angular-rails app
 
 * bootstrap rails with angular - http://angular-rails.com/bootstrap.html
+
+* http://start.jcolemorrison.com/setting-up-an-angularjs-and-rails-4-1-project/
