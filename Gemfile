@@ -12,6 +12,9 @@ gem 'pry', '~> 0.10.1'
 gem 'bootstrap_form'
 
 gem 'jquery-rails'
+gem 'angularjs-rails'
+
+
 # gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -30,9 +33,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
-
   gem 'web-console', '~> 2.0'
-
   gem 'spring'
+end
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+  gem "factory_girl_rails", "~> 4.0"
+  gem "capybara"
+  gem "database_cleaner"
+  gem "selenium-webdriver"
 end
 
