@@ -5,3 +5,9 @@
 @import "news-list";
 @import "responsive";
 
+a{
+  color: blue;
+}
+a:hover{
+  text-decoration: none;
+}

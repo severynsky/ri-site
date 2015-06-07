@@ -1,12 +1,12 @@
 %section.popup{"ng-href" => "/"}
   .news-item-container{"ng-repeat" => "newsItem in news"}
     .image
-    .text-container
+    %a.text-container{"ng-href" => "#/news/{{ newsItem.id }} "}
       %h1
-        {{ newsItem.title | limitTo: 40 }}..
+        {{ newsItem.title | limitTo: 38 }}..
       .utilities
-        %span{"ng-show" => "newsItem.category_id"}
-          {{ newsItem.category_id }}
+        %span{"ng-show" => "newsItem.category"}
+          {{ newsItem.category.title }},
         %span
           {{ newsItem.created_at | date: fullDate }}
       %p

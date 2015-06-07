@@ -1,7 +1,8 @@
 class NewsController < ApplicationController
 
   def index
-    render json: @news = News.all
+    @news = News.all
+    # render json: @news.as_json(include: [:category])
   end
 
 end

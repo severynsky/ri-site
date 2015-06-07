@@ -1,0 +1,12 @@
+%section.popup
+  %a.btn.btn-info{"ng-href" => "#/news"}
+    back
+  .news-item-container
+    .image
+    .text-container
+      %h3
+        {{news[itemNews].title}}
+      %p
+        {{news[itemNews].body}}
+
+%a.fadeout{"ng-href" => "#/news"}
