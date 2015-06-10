@@ -1,5 +1,5 @@
 %section.popup{"ng-href" => "/"}
-  .news-item-container{"ng-repeat" => "newsItem in news"}
+  .news-item-container{"ng-repeat" => "newsItem in news.news"}
     .image
     %a.text-container{"ng-href" => "#/news/{{ newsItem.id }} "}
       %h1
