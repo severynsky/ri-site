@@ -1,3 +1,49 @@
 // Place all the styles related to the News controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+//  overflow: visible;
+}
+.news-container{
+  background-color: rgba(40,40,40,0.4);
+  height: 90vh;
+//  width: 100%;
+  margin: 2%;
+  color: #FFF;
+  .news-list{
+    list-style-type: none;
+    overflow-y: scroll !important;
+    height: 80vh;
+    .news-item{
+      background-color: rgba(40,40,40,0.7);
+      margin: 5px;
+      padding: 10px;
+      h4{
+        border-bottom: 1px solid white;
+      }
+      p.news-item-p{
+        font-weight: 200;
+        font-size: 0.8em;
+        margin-right: 50px;
+        float: left;
+        width: 75%;
+      }
+    }
+  }
+  .edit-container{
+    p{
+      font-size: 0.8em;
+      color: #2E2F30;
+      input{
+        width: 100%;
+        padding: 5px;
+      }
+      textarea{
+        width: 100%;
+        min-height: 350px;
+        padding: 5px;
+      }
+    }
+  }
+
+}

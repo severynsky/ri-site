@@ -11,6 +11,6 @@ rotaryApp = angular.module('rotaryApp', [
     });
 
 rotaryApp.run(function(){
-    console.log('angular is running')
+    console.log('angular app is running')
 });
 

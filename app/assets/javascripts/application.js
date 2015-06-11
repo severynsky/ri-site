@@ -22,3 +22,22 @@
 //= require_tree ./templates
 
 //= require_tree .
+
+
+console.log('hello');
+
+$('document').ready(function(){
+
+    hideAlert = function(){
+        if($('.alert').length > 0){
+            console.log('hello alert')
+            setTimeout(function(){$('.alert').fadeOut(200)}, 1500);
+        }else{
+            console.info('no alert')
+        }
+    };
+
+    hideAlert();
+
+});
+

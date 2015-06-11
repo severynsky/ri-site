@@ -1,2 +1,18 @@
-%h3
-  hello
+.container-fluid.news-container
+  .col-xs-6
+    %h3
+      All news list
+    %ul.news-list
+      - @news.each do |newsitem|
+        %li.news-item
+          %h4
+            = newsitem.title
+          %p.news-item-p
+            = truncate(newsitem.body, length:140)
+          = link_to "edit", edit_news_path(newsitem), remote: true, class:('btn btn-info pull-right')
+          .clearfix
+  .col-xs-6
+    %h3
+      edit form
+    .edit-container
+

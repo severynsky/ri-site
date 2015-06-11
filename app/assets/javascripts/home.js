@@ -4,10 +4,7 @@ $initialFunction = function(){
     marginLeft: 0
   }, 500, "linear");
 
-
-
     $( window ).resize(function() {
-
 
     });
 };
