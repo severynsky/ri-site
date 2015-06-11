@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
-  before_action :find_newsitem, only:[:edit, :show, :update]
+  before_action :find_newsitem, only:[:edit, :show, :update, :destroy]
   def index
-    @news = News.all
+    @news = News.order('created_at DESC').all
     # render :json
   end
 
@@ -11,7 +11,9 @@ class NewsController < ApplicationController
 
   def create
     @newsItem = News.new(permit_params)
-    @newsItem.save
+    if @newsItem.save
+      render 'show'
+    end
   end
 
   def show
@@ -23,10 +25,9 @@ class NewsController < ApplicationController
   end
 
   def update
-    # binding.pry
      if @newsItem.update(permit_params)
        flash[:notice] = "item has been updated"
-       redirect_to '/news'
+       render 'show'
      end
   end
 
@@ -37,7 +38,7 @@ class NewsController < ApplicationController
   private
 
   def permit_params
-    params.require(:news).permit(:title, :body)
+    params.require(:news).permit(:title, :body, :category_id)
   end
 
   def find_newsitem
