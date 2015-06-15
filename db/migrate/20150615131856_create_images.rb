@@ -1,7 +1,10 @@
 class CreateImages < ActiveRecord::Migration
   def change
     create_table :images do |t|
-      t.boolean :is_main, :default => false
+      t.boolean :is_main, default: false
+      t.integer :imageable_id
+      t.string :imageable_type
+
       t.timestamps null: false
     end
   end
