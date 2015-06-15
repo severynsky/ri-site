@@ -10,7 +10,7 @@
       %p.news-item-p
         = truncate(newsitem.body, length:60)
       .button-container
-        = link_to "delete", news_path(newsitem), remote: true, method: :delete, data: {confirm:  "are You sure"}, class:('btn btn-danger')
-        = link_to "edit", edit_news_path(newsitem), remote: true, class:('btn btn-info')
         = link_to "view", news_path(newsitem), remote: true, class:('btn btn-success')
+        = link_to "edit", edit_news_path(newsitem), remote: true, class:('btn btn-info')
+        = link_to "delete", news_path(newsitem), remote: true, method: :delete, data: {confirm:  "are You sure"}, class:('btn btn-danger')
       .clearfix

@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
   before_action :find_newsitem, only:[:edit, :show, :update, :destroy]
+  before_action :find_categories
   def index
     @news = News.order('created_at DESC').all
     # render :json
@@ -11,6 +12,7 @@ class NewsController < ApplicationController
 
   def create
     @newsItem = News.new(permit_params)
+    # binding.pry
     if @newsItem.save
       render 'show'
     end
@@ -43,6 +45,10 @@ class NewsController < ApplicationController
 
   def find_newsitem
     @newsItem = News.find(params[:id])
+  end
+
+  def find_categories
+    @categories = Category.all
   end
 
 end

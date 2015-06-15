@@ -40,19 +40,25 @@ body{
     border: 1px solid whtie;
     color: #FFF;
     padding: 10px;
-    margin-top: 40px;
     background-color: $greytransparent;
+    .show-container{
+      overflow-y: scroll;
+      height: 80vh;
+      padding: 0 10px;
+      p.alltext{
+      }
+    }
     p{
       font-size: 0.8em;
       color: #FFF;
-      margin: 3px 0;
+//      margin: 3px 0;
       span.label{
         font-size: 90%;
         font-weight: 100;
       }
       input{
         width: 100%;
-        padding: 5px;
+        padding: 10px;
         color: #2E2F30;
       }
       textarea{
