@@ -1,1 +1,0 @@
-json.id @news.id
