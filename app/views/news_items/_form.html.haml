@@ -1,0 +1,20 @@
+= form_for @newsItem, html:{class: 'add-news_items-form', multipart: true}, remote: true do |newnews|
+  - if @newsItem.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@newsItem.errors.count, "error")
+        prohibitet this product for being saved:
+    %ul
+      - @newsItem.errors.full_messages.each do |msg|
+        %li= msg
+  %p
+    = newnews.label :title
+    =  newnews.text_field :title
+  %p
+    = newnews.label "Select category:"
+    = collection_select(:news_item, :category_id, Category.all, :id, :title)
+  %p
+    = newnews.label :body
+    = newnews.text_area :body
+
+  = newnews.submit class: ('btn btn-info'), remote: true

@@ -4,7 +4,7 @@ rotaryApp.controller('newsContr', ['$scope', '$http', 'getNews', function($scope
 
     //debugger;
     var loadNews = function(){
-        //debugger;
+        debugger;
 
         $scope.news = getNews.query();
         window.news = getNews.query();

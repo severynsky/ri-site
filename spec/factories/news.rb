@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :news do
+  factory :news_items do
     title "MyString"
   end
 

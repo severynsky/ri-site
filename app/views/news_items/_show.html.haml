@@ -1,0 +1,12 @@
+.show-container
+  %h3
+    = @newsItem.title
+  %hr
+  %p
+    -#= binding.pry
+    Category:
+    %b
+      = @newsItem.category.title
+  %hr
+  %p.alltext
+    = @newsItem.body

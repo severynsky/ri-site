@@ -1,5 +1,5 @@
 rotaryApp.factory('getNews', function($resource){
-    return $resource('/news.json', {},{
+    return $resource('/news_items.json', {},{
         update: {
             method: "PUT"
         },

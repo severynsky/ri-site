@@ -7,11 +7,11 @@ rotaryApp.config(['$routeProvider',
                 templateUrl: "assets/templates/home.html",
                 controller: 'testContr'
             }).
-            when('/news', {
-                templateUrl: "assets/templates/news.html",
-                controller: 'newsContr'
+            when('/news_items', {
+                templateUrl: "assets/templates/news_items.html",
+                controller: 'newsItemContr'
             }).
-            when('/news/:newsId', {
+            when('/news_items/:newsId', {
                 templateUrl: "assets/templates/newspage.html",
                 controller: 'newsItemContr'
             }).
