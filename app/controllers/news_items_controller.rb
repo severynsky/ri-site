@@ -8,9 +8,11 @@ class NewsItemsController < ApplicationController
 
   def new
     @newsItem = NewsItem.new
+    @newsItem.images.build
   end
 
   def create
+    binding.pry
     @newsItem = NewsItem.new(permit_params)
     if @newsItem.save
       render 'show'
@@ -39,7 +41,7 @@ class NewsItemsController < ApplicationController
   private
 
   def permit_params
-    params.require(:news_item).permit(:title, :body, :category_id)
+    params.require(:news_item).permit(:title, :body, :category_id, images_attributes:[:picture, :is_main])
   end
 
   def find_newsitem

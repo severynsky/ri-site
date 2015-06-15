@@ -16,6 +16,8 @@ gem 'bower-rails'
 gem 'angular-rails-templates'
 
 gem 'jquery-rails'
+gem "paperclip", "~> 4.2"
+gem 'remotipart', '~> 1.2'
 
 
 # gem 'turbolinks'

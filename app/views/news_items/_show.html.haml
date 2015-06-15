@@ -1,4 +1,6 @@
 .show-container
+  - if @newsItem.images != []
+    = image_tag @newsItem.images.first.picture.url(:thumb)
   %h3
     = @newsItem.title
   %hr

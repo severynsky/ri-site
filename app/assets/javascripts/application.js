@@ -18,6 +18,7 @@
 //= require angular-route
 //= require angular-resource
 //= require angular-rails-templates
+//= require jquery.remotipart
 //= require_tree ./angular/
 //= require_tree ./templates
 

@@ -9,13 +9,14 @@ body{
 .news-container{
   background-color: rgba(40,40,40,0.4);
   height: 90vh;
-//  width: 100%;
   margin: 2%;
   color: #FFF;
+
+
   .news-list{
     list-style-type: none;
-    overflow-y: scroll !important;
     height: 80vh;
+    overflow-y: scroll !important;
     padding: 0;
     .news_items-item{
       border-left: 3px solid $greytransparent;
@@ -37,13 +38,13 @@ body{
     }
   }
   .crud-container{
+    overflow-y: scroll !important;
+    height: 80vh;
     border: 1px solid whtie;
     color: #FFF;
     padding: 10px;
     background-color: $greytransparent;
     .show-container{
-      overflow-y: scroll;
-      height: 80vh;
       padding: 0 10px;
       p.alltext{
       }

@@ -1,4 +1,4 @@
-= form_for @newsItem, html:{class: 'add-news_items-form', multipart: true}, remote: true do |newnews|
+= form_for @newsItem, html:{class: 'add-news_items-form', multipart: true}, remote: true do |newitem|
   - if @newsItem.errors.any?
     #error_explanation
       %h2
@@ -8,13 +8,21 @@
       - @newsItem.errors.full_messages.each do |msg|
         %li= msg
   %p
-    = newnews.label :title
-    =  newnews.text_field :title
+    = newitem.label :title
+    =  newitem.text_field :title
   %p
-    = newnews.label "Select category:"
+    = newitem.label "Select category:"
     = collection_select(:news_item, :category_id, Category.all, :id, :title)
+  %div
+    = newitem.fields_for :images do |i|
+      %p
+        = i.label :picture
+        = i.file_field :picture
+      %p
+        = i.label :is_main, "is main?"
+        = i.check_box :is_main
   %p
-    = newnews.label :body
-    = newnews.text_area :body
+    = newitem.label :body
+    = newitem.text_area :body
 
-  = newnews.submit class: ('btn btn-info'), remote: true
+  = newitem.submit class: ('btn btn-info'), remote: true
