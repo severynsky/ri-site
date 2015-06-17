@@ -1,0 +1,5 @@
+%ul
+  - newsItem.images.each do |img|
+    %li{id: "picture-#{img.id}"}
+      = img.picture
+      = link_to 'X', image_path(img), method: :delete, remote: true

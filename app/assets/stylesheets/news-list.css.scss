@@ -25,12 +25,18 @@
 .news-item-container .image{
   height: 160px;
   width: 160px;
+  overflow: hidden;
   background-color: white;
   border: 2px solid #E6E6E6;
   margin-right: 0.5em;
   float: left;
   margin-top: 4px;
   margin-left: 4px;
+  img{
+    width: 100%;
+    height: auto;
+    margin-top: -20%;
+  }
 }
 .text-container{
   padding-right: 1em;

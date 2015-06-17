@@ -15,12 +15,10 @@
     = collection_select(:news_item, :category_id, Category.all, :id, :title)
   %div
     = newitem.fields_for :images do |i|
-      %p
-        = i.label :picture
-        = i.file_field :picture
-      %p
-        = i.label :is_main, "is main?"
-        = i.check_box :is_main
+      = render 'image_field', i: i
+    %p
+    - if @newsItem.images != nil
+      = render "remove_image_button", newsItem: @newsItem
   %p
     = newitem.label :body
     = newitem.text_area :body

@@ -9,25 +9,24 @@ class NewsItemsController < ApplicationController
   def new
     @newsItem = NewsItem.new
     @newsItem.images.build
+    # binding.pry
+    @newsItem.images[0].is_main = true
   end
 
   def create
-    binding.pry
     @newsItem = NewsItem.new(permit_params)
     if @newsItem.save
+      binding.pry
       render 'show'
     end
   end
 
   def show
-    # respond_to do |format|
-    #   format.json {
-    #   }
-    # end
   end
 
   def edit
     # binding.pry
+    @newsItem.images.build if @newsItem.images.length == 0
   end
 
   def update
@@ -44,7 +43,7 @@ class NewsItemsController < ApplicationController
   private
 
   def permit_params
-    params.require(:news_item).permit(:title, :body, :category_id, images_attributes:[:picture, :is_main])
+    params.require(:news_item).permit(:title, :body, :category_id, images_attributes:[:picture, :is_main, :_destroy, :id])
   end
 
   def find_newsitem

@@ -11,7 +11,9 @@ rotaryApp.controller('newsItemContr',['$scope', '$http', '$routeParams', 'getNew
     newsItem = getNews.get({id: $routeParams.newsId}, function(){
         $scope.print = {
             title: newsItem.title,
-            body: newsItem.body
+            body: newsItem.body,
+            category: newsItem.category,
+            image: newsItem.image
         };
     });
 
