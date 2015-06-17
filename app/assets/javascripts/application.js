@@ -19,6 +19,7 @@
 //= require angular-resource
 //= require angular-rails-templates
 //= require jquery.remotipart
+//= require cocoon
 //= require_tree ./angular/
 //= require_tree ./templates
 

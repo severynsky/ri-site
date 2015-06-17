@@ -1,0 +1,11 @@
+.nested-fields
+  .field
+    = img.file_field :picture
+  .field
+    %span
+      = img.check_box :is_main
+    is main?
+
+  -#= link_to_remove_association "remove image", img
+  -#=i.check_box :_destroy
+  -#=i.label :_destroy, "remove img"

@@ -8,7 +8,7 @@ class Image < ActiveRecord::Base
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   def check_img
-    binding.pry
+    # binding.pry
   end
 
 end

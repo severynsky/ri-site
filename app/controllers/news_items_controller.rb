@@ -8,12 +8,13 @@ class NewsItemsController < ApplicationController
 
   def new
     @newsItem = NewsItem.new
-    @newsItem.images.build
-    # binding.pry
-    @newsItem.images[0].is_main = true
+    # 3.times {@newsItem.images.build}
+    binding.pry
+    # @newsItem.images[0].is_main = true
   end
 
   def create
+    binding.pry
     @newsItem = NewsItem.new(permit_params)
     if @newsItem.save
       binding.pry
@@ -30,7 +31,9 @@ class NewsItemsController < ApplicationController
   end
 
   def update
+    binding.pry
      if @newsItem.update(permit_params)
+       binding.pry
        flash[:notice] = "item has been updated"
        render 'show'
      end
