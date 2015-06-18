@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 289251c32cd3db9c908bac75678f58f95258ea97
+  specs:
+    ckeditor (4.1.2)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -111,6 +119,7 @@ GEM
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
     paperclip (4.2.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -214,6 +223,7 @@ DEPENDENCIES
   bower-rails
   byebug
   capybara
+  ckeditor!
   cocoon (~> 1.2.0)
   coffee-rails (~> 4.1.0)
   database_cleaner

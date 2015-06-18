@@ -19,6 +19,8 @@ gem 'jquery-rails'
 gem "paperclip", "~> 4.2"
 gem 'remotipart', '~> 1.2'
 gem "cocoon", '~> 1.2.0'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+
 
 # gem 'turbolinks'
 

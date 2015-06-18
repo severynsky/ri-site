@@ -30,6 +30,6 @@
 
   %p
     = newitem.label :body
-    = newitem.text_area :body
+    = newitem.cktext_area :body, ckeditor: {:uiColor => '#AADC6E', :toolbar => 'mini'}
 
   = newitem.submit class: ('btn btn-info'), remote: true

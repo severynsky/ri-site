@@ -20,6 +20,7 @@
 //= require angular-rails-templates
 //= require jquery.remotipart
 //= require cocoon
+//= require ckeditor/init
 //= require_tree ./angular/
 //= require_tree ./templates
 

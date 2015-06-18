@@ -11,7 +11,8 @@
       = @newsItem.category.title
   %hr
   %p.alltext
-    = @newsItem.body
+    = @newsItem.body.html_safe
+  .clearfix
   %hr
   %p
     %ul
