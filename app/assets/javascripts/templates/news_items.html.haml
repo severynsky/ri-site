@@ -2,7 +2,7 @@
   .news-item-container{"ng-repeat" => "newsItem in news.news"}
     .image
       %img(src="{{newsItem.images[0].main_image}}")
-    %a.text-container{"ng-href" => "#/news_items/{{ newsItem.id }} "}
+    %a.text-container{"ng-href" => "#/news_items/{{ newsItem.id }}", "id" => "bind-html-with-sanitize"}
       %h1
         {{ newsItem.title | limitTo: 38 }}..
       .utilities

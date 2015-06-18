@@ -1,6 +1,7 @@
 rotaryApp = angular.module('rotaryApp', [
     'ngRoute',
     'ngResource',
+    'ngSanitize',
     'templates'
 
 ]);

@@ -4,10 +4,10 @@
   .news-item-container
     .image
       %img(src="{{print.image}}")
-    .text-container
+    .text-container{"id" => "bind-html-with-trust"}
       %h3
         {{print.title}}
-      %p
-        {{print.body}}
+      %p{"ng-bind-html" => "deliberatelyTrustDangerousSnippet()"}
+        -#{{print.body}}
 
 %a.fadeout{"ng-href" => "#/news_items"}

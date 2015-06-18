@@ -14,7 +14,6 @@ class NewsItemsController < ApplicationController
   end
 
   def create
-    binding.pry
     @newsItem = NewsItem.new(permit_params)
     if @newsItem.save
       binding.pry
@@ -31,11 +30,9 @@ class NewsItemsController < ApplicationController
   end
 
   def update
-    binding.pry
      if @newsItem.update(permit_params)
-       binding.pry
        flash[:notice] = "item has been updated"
-       render 'show'
+       redirect_to '/news_items'
      end
   end
 

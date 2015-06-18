@@ -1,4 +1,5 @@
-= form_for @newsItem, html:{class: 'add-news_items-form', multipart: true, multiple: true}, remote: true do |newitem|
+-#= javascript_include_tag :ckeditor
+= form_for @newsItem, html:{class: 'add-news_items-form', multipart: true, multiple: true} do |newitem|
 
   - if @newsItem.errors.any?
     #error_explanation
@@ -30,6 +31,7 @@
 
   %p
     = newitem.label :body
-    = newitem.cktext_area :body, ckeditor: {:uiColor => '#AADC6E', :toolbar => 'mini'}
+    = newitem.cktext_area :body,{class: 'ckeditor', ckeditor: {:uiColor => '#AADC6E', :toolbar => 'mini'}}
+    -#= ckeditor_ajax_script
 
   = newitem.submit class: ('btn btn-info'), remote: true

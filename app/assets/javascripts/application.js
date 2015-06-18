@@ -17,6 +17,7 @@
 //= require angular
 //= require angular-route
 //= require angular-resource
+//= require angular-sanitize
 //= require angular-rails-templates
 //= require jquery.remotipart
 //= require cocoon
