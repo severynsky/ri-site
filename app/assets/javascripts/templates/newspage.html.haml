@@ -1,13 +1,15 @@
 %section.popup
-  %a.btn.btn-info{"ng-href" => "#/news_items"}
-    back
-  .news-item-container
+  .news-item-page
     .image
       %img(src="{{print.image}}")
-    .text-container{"id" => "bind-html-with-trust"}
       %h3
         {{print.title}}
+
+    .text-container{"id" => "bind-html-with-trust"}
+      %hr
+      %p.date
+        {{ print.date | date: fullDate }}
       %p{"ng-bind-html" => "deliberatelyTrustDangerousSnippet()"}
         -#{{print.body}}
-
+      %hr
 %a.fadeout{"ng-href" => "#/news_items"}

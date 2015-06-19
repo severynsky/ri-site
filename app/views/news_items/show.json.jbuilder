@@ -9,4 +9,4 @@ json.images do |newsImage|
     json.main_img newsImage.picture.url
   end
 end
-# json.image @newsItem.images.last.picture.url
+json.image @newsItem.images.first.picture.url

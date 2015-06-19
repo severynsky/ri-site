@@ -13,7 +13,7 @@ rotaryApp.config(['$routeProvider',
             }).
             when('/news_items/:newsId', {
                 templateUrl: "assets/templates/newspage.html",
-                controller: 'newsItemContr'
+                controller: 'newsPageContr'
             }).
             otherwise({
                 redirectTo: '#/'
