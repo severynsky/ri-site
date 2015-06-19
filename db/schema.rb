@@ -40,11 +40,11 @@ ActiveRecord::Schema.define(version: 20150617183702) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "images", force: :cascade do |t|
-    t.boolean  "is_main",              default: false
     t.integer  "imageable_id"
     t.string   "imageable_type"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.string   "description"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150617183702) do
 
   create_table "news_items", force: :cascade do |t|
     t.string   "title"
+    t.text     "intro_text"
     t.text     "body"
     t.integer  "category_id"
     t.datetime "created_at",  null: false

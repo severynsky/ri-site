@@ -8,16 +8,13 @@ class NewsItemsController < ApplicationController
 
   def new
     @newsItem = NewsItem.new
-    # 3.times {@newsItem.images.build}
-    binding.pry
-    # @newsItem.images[0].is_main = true
+    @newsItem.build_image
   end
 
   def create
     @newsItem = NewsItem.new(permit_params)
     if @newsItem.save
-      binding.pry
-      render 'show'
+      redirect_to '/news_items'
     end
   end
 
@@ -25,8 +22,7 @@ class NewsItemsController < ApplicationController
   end
 
   def edit
-    # binding.pry
-    @newsItem.images.build if @newsItem.images.length == 0
+    @newsItem.build_image if @newsItem.image == nil
   end
 
   def update
@@ -43,7 +39,7 @@ class NewsItemsController < ApplicationController
   private
 
   def permit_params
-    params.require(:news_item).permit(:title, :body, :category_id, images_attributes:[:picture, :is_main, :_destroy, :id])
+    params.require(:news_item).permit(:title, :intro_text, :body, :category_id, image_attributes:[:picture, :is_main, :_destroy, :id])
   end
 
   def find_newsitem

@@ -18,20 +18,21 @@
 
   -#field for images
   %div
-    = newitem.fields_for :images do |i|
-      -#=binding.pry
-      = render 'image_fields', :img => i
-      .links
-      -#= link_to_add_association "add_image", newitem, :images, :render_options => {:locals => {:img => i }}
-
+    = newitem.fields_for :image do |i|
+      .field
+        = i.file_field :picture
+        = i.check_box :_destroy
+        = i.label :_destroy, "remove img"
     %p
-    - if @newsItem.images != nil
-      = render "remove_image_button", newsItem: @newsItem
-
-
+    -#- if @newsItem.image != nil
+      -#= render "remove_image_button", newsItem: @newsItem
+  %p
+    = newitem.label "Intro text"
+    %br
+    = newitem.text_area :intro_text, class:('field')
   %p
     = newitem.label :body
     = newitem.cktext_area :body,{class: 'ckeditor', ckeditor: {:uiColor => '#AADC6E', :toolbar => 'mini'}}
-    -#= ckeditor_ajax_script
 
   = newitem.submit class: ('btn btn-info'), remote: true
+  = link_to "Cancel", news_items_path, class: ('btn btn-warning')

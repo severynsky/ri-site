@@ -6,9 +6,12 @@
         {{print.title}}
 
     .text-container{"id" => "bind-html-with-trust"}
-      %hr
       %p.date
         {{ print.date | date: fullDate }}
+      %br
+      %p.intro-text
+        {{ print.intro }}
+      %hr
       %p{"ng-bind-html" => "deliberatelyTrustDangerousSnippet()"}
         -#{{print.body}}
       %hr

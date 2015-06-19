@@ -1,6 +1,4 @@
-- if @newsItem.images.last.id != nil
-  %ul
-    - newsItem.images.each do |img|
-      %li{id: "picture-#{img.id}"}
-        = img.picture
-        = link_to 'X', image_path(img), method: :delete, remote: true
+- if @newsItem.image.id != nil
+  %p{id: "picture-#{@newsItem.image.id}"}
+    = @newsItem.image.picture
+    = link_to 'X', image_path(@newsItem.image), method: :delete, remote: true

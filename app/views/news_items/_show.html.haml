@@ -1,6 +1,6 @@
 .show-container
-  - if @newsItem.images != []
-    = image_tag @newsItem.images.first.picture.url(:thumb)
+  - if @newsItem.image != nil
+    = image_tag @newsItem.image.picture.url(:small)
   %h3
     = @newsItem.title
   %hr
@@ -11,12 +11,14 @@
       = @newsItem.category.title
   %hr
   %p.alltext
+    intro text:
+    %br
+    = @newsItem.intro_text
+  %hr
+  %p.alltext
     = @newsItem.body.html_safe
   .clearfix
   %hr
-  %p
-    %ul
-      - @newsItem.images.each do |img|
-        %li{id: "picture-#{img.id}"}
-          = image_tag img.picture.url(:thumb)
-          = link_to 'X', image_path(img), method: :delete, remote: true
+  -#%p{id: "picture-#{@newsItem.image.id}"}
+  -#  = image_tag @newsItem.image.picture.url(:thumb)
+  -#  = link_to 'X', image_path(@newsItem.image), method: :delete, remote: true

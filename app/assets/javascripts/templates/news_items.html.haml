@@ -5,17 +5,17 @@
         Новини
     .news-item{"ng-repeat" => "newsItem in news.news"}
       .image
-        %img(src="{{newsItem.images[0].main_image}}")
+        %img(src="{{newsItem.image}}")
       %a.text-container{"ng-href" => "#/news_items/{{ newsItem.id }}", "id" => "bind-html-with-sanitize"}
         %h1
           {{ newsItem.title | limitTo: 38 }}..
         .utilities
-          %span{"ng-show" => "newsItem.category"}
-            {{ newsItem.category.title }},
           %span
             {{ newsItem.created_at | date: fullDate }}
+          %span.category{"ng-show" => "newsItem.category"}
+            {{ newsItem.category.title }}
         %p
-          {{ newsItem.body | limitTo: 230}}..
+          {{ newsItem.intro }}
     .clear
 
 %a.fadeout{"ng-href" => "#/"}
