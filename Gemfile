@@ -12,7 +12,7 @@ gem 'pry', '~> 0.10.1'
 gem 'bootstrap_form'
 
 gem 'bower-rails'
-gem 'angular-rails-templates'
+gem 'angular-rails-templates', '~> 0.2.0'
 
 gem 'jquery-rails'
 gem "paperclip", "~> 4.2"
