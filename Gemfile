@@ -21,7 +21,9 @@ gem 'remotipart', '~> 1.2'
 gem "cocoon", '~> 1.2.0'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 
+gem 'angular_rails_csrf'
 gem 'devise'
+gem "rails-assets-angular-devise"
 
 
 # gem 'turbolinks'

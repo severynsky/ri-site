@@ -19,6 +19,7 @@
 //= require angular-resource
 //= require angular-sanitize
 //= require angular-rails-templates
+//= require angular-devise
 //= require jquery.remotipart
 //= require cocoon
 //= require ckeditor/init
