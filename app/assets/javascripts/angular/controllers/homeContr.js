@@ -1,4 +1,4 @@
-rotaryApp.controller('testContr', function($scope){
+rotaryApp.controller('homeContr', function($scope){
 
     angular.element(document).ready(
         $initialFunction());

@@ -5,7 +5,7 @@ rotaryApp.config(['$routeProvider',
         $routeProvider.
             when('/', {
                 templateUrl: "assets/templates/home.html",
-                controller: 'testContr'
+                controller: 'homeContr'
             }).
             when('/news_items', {
                 templateUrl: "assets/templates/news_items.html",
