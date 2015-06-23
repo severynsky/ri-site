@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
-# gem 'mysql', '~> 2.9.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -25,6 +24,7 @@ gem 'angular_rails_csrf'
 gem 'devise'
 gem "rails-assets-angular-devise"
 
+gem 'rails_12factor', group: :production
 
 # gem 'turbolinks'
 
