@@ -4,15 +4,15 @@ rotaryApp.config(['$routeProvider',
     function($routeProvider){
         $routeProvider.
             when('/', {
-                templateUrl: "assets/templates/home.html",
+                templateUrl: "<%=asset_path 'assets/templates/home.html' %>",
                 controller: 'homeContr'
             }).
             when('/news_items', {
-                templateUrl: "assets/templates/news_items.html",
+                templateUrl: "<%=asset_path 'assets/templates/news_items.html' %>",
                 controller: 'newsListContr'
             }).
             when('/news_items/:newsId', {
-                templateUrl: "assets/templates/newspage.html",
+                templateUrl: "<%=asset_path 'assets/templates/newspage.html' %>",
                 controller: 'newsPageContr'
             }).
             otherwise({

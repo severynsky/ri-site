@@ -4,7 +4,7 @@
 body{
   font-size: 16px;
   background-color: #5D2D6E;
-  background: url(/images/people.jpg) no-repeat center center fixed;
+  background: image-url(/images/people.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -113,7 +113,7 @@ body{
   color: orange;
 }
 #news:hover{
-  background-image: url(/images/icons/lviv.jpg);
+  background-image: image-url(/images/icons/lviv.jpg);
   background-size: 240px;
 //  background-position: center;
 //  background-repeat: no-repeat;
@@ -127,7 +127,7 @@ body{
   width: 330px;
   position: relative;
   padding: 0;
-  background-image: url(/images/project.png);
+  background-image: image-url(/images/project.png);
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.85;
@@ -174,14 +174,14 @@ body{
   height: 190px;
   width: 190px;
   position: relative;
-  background-image: url(/images/people-normal.png);
+  background-image: image-url(/images/people-normal.png);
   background-size: 190px;
   -webkit-transition: 0.15s;
   -o-transition: 0.15s;
   transition: 0.15s;
 }
 #photos:hover{
-  background-image: url(/images/people-hover.jpg);
+  background-image: image-url(/images/people-hover.jpg);
   background-size: 190px;
   background-color: none;
 }
@@ -242,7 +242,7 @@ body{
   height: 130px;
   width: 130px;
   margin-top: 45px;
-  background-image: url(/images/icons/contact-icon.png);
+  background-image: image-url(/images/icons/contact-icon.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80px;

@@ -1,6 +1,6 @@
-rotaryApp.controller('homeContr', function($scope, Auth){
+rotaryApp.controller('homeContr', ['$scope', 'Auth', function($scope, Auth){
 
   angular.element(document).ready(
     $initialFunction());
 
-});
+}]);
