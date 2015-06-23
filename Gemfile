@@ -24,7 +24,11 @@ gem 'angular_rails_csrf'
 gem 'devise'
 gem "rails-assets-angular-devise"
 
-gem 'rails_12factor', group: :production
+group :production, :staging do
+  gem "rails_12factor"
+  gem "rails_stdout_logging"
+  gem "rails_serve_static_assets"
+end
 
 # gem 'turbolinks'
 
