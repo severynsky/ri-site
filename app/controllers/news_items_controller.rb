@@ -1,4 +1,6 @@
 class NewsItemsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
+
   before_action :find_newsitem, only:[:edit, :show, :update, :destroy]
   before_action :find_categories
   def index

@@ -1,0 +1,12 @@
+.login-field
+  - if current_user
+    %p
+      = current_user.email
+      = link_to "exit", destroy_user_session_path, method: "DELETE" 
+    %ul
+      %li
+        = link_to "admin page", home_index_path
+      %li
+        = link_to "home", root_path
+  - else
+    = link_to 'login', new_user_session_path

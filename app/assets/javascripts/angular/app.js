@@ -6,9 +6,6 @@ rotaryApp = angular.module('rotaryApp', [
     'Devise'
 
 ]);
-config(function(AuthProvider) {
-        // Configure Auth service with AuthProvider
-}).
 rotaryApp.controller('mainController', function($scope, $location, Auth){
         $scope.go = function(path){
         $location.path(path);
