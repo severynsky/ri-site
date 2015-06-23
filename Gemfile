@@ -24,6 +24,7 @@ gem "angular_rails_csrf"
 gem "devise"
 gem "rails-assets-angular-devise"
 
+gem "foreman"
 gem "bower"
 
 group :production, :staging do
